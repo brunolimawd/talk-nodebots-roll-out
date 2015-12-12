@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>NodeBots roll out</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blueprint.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section style="text-align: left;">
+	          <h1>NodeBots roll out :rocket:</h1>
+				</section>
+				<section style="text-align: left;">
+					<img src="img/avatar.jpg" alt="Eu" class="avatar">
+					<h2>Bruno Lima</h2>
+					<ul>
+						<li>Front-end Developer @ CESAR</li>
+						<li>Mozillian</li>
+						<li>NodeBots Recife</li>
+					</ul>
+	      </section>
+	      <section style="text-align: left;">
+	          <h2>Nodebots</h2>
+	      </section>
+				<section style="text-align: left;">
+					<h3>Chris Williams</h3>
+					<p>@voodootikigod</p>
+					<h1 class="fragment">:thumbsup:</h1>
+				</section>
+				<section data-background="img/nodebot-00.jpg"></section>
+				<section data-background="img/nodebot-01.jpg"></section>
+				<section data-background="img/nodebot-03.jpg"></section>
+	      <section data-background="img/james-chin-diy-smartwatch.jpg"></section>
+				<section data-background="img/nodebot-02.jpg"></section>
+				<section style="text-align: left;">
+	          <h2>Ecossistema</h2>
+	      </section>
+	      <section data-transition="fade">
+					<img src="img/ecosystem.png" alt="Ecossistema">
+	      </section>
+				<section data-transition="fade">
+					<img src="img/ecosystem-a.png" alt="Ecossistema">
+	      </section>
+				<section data-transition="fade">
+					<img src="img/ecosystem-b.png" alt="Ecossistema">
+	      </section>
+				<section data-transition="fade">
+					<img src="img/ecosystem-c.png" alt="Ecossistema">
+	      </section>
+				<section data-transition="fade">
+					<img src="img/battery.png" alt="Ecossistema">
+	      </section>
+				<section>
+					<h1>J5</h1>
+					<p>johnny-five</p>
+				</section>
+	      <section style="text-align: left;">
+	        <h2>Primeiros passos</h2>
+	      </section>
+				<section style="text-align: left;">
+	        <h3>Instalando o Node.js</h3>
+	          <pre>
+							<code class="bash" data-trim contenteditable>
+brew install node
+	          </code>
+					</pre>
+					<pre>
+						<code class="bash" data-trim contenteditable>
+apt-get install nodejs
+						</code>
+					</pre>
+					<p>*<a href="">Node.js no Windows</a></p>
+	      </section>
+				<section style="text-align: left;">
+					<h3>Instalando o Arduino</h3>
+					<h3><a href="https://www.arduino.cc/">arduino.cc</a></h3>
+					<p>*<a href="https://www.arduino.cc/en/Guide/Windows">Arduino no Windows</a></p>
+				</section>
+				<section style="text-align: left;">
+	        <h3>Instalando o johnny-five</h3>
+	          <pre>
+							<code class="bash" data-trim contenteditable>
+npm install johnny-five
+	          </code>
+					</pre>
+	      </section>
+	      <section style="text-align: left;">
+	        <h3>Criando um Hello World</h3>
+	          <pre>
+							<code class="javascript" data-trim contenteditable>
+var five = require('johnny-five');
+var board = new five.Board();
+
+board.on('ready', function() {
+  var led = new five.Led(13);
+  led.blink(500);
+});
+	          </code>
+					</pre>
+					<p>hello-led.js</p>
+	      </section>
+				<section style="text-align: left;">
+	        <h3>Rodando o primeiro nodebot</h3>
+	          <pre>
+							<code class="bash" data-trim contenteditable>
+node hello-led.js
+	          </code>
+					</pre>
+	      </section>
+				<section data-background-video="videos/led-strobe.mp4,videos/led-strobe.webm" data-background-color="#000">
+				</section>
+	      <section style="text-align: left;">
+	        <h2>Demo</h2>
+	      </section>
+	      <section style="text-align: left;">
+						<h3>Próximos passos</h3>
+						<img src="img/books.png" alt="Books" />
+	      </section>
+	      <section style="text-align: left;">
+          <h2>refs :metal:</h2>
+					<ul>
+						<li><a href="http://nodebots.io/">nodebots.io</a></li>
+						<li><a href="http://nodebotsrec.github.io/">nodebotsrec.github.io</a></li>
+						<li><a href="http://bit.ly/1QqsT16">Johnny-Five - bit.ly/1QqsT16</a></li>
+						<li><a href="http://bit.ly/1JYs39D">Cylon.js - bit.ly/1JYs39D</a></li>
+						<li><a href="http://amzn.to/1jUAiL0">Learning JavaScript Robotics [Book] - amzn.to/1jUAiL0</a></li>
+						<li><a href="http://amzn.to/1Nrt127">Make: JavaScript Robotics [Book] - bit.ly/1Nrt127</a></li>
+					</ul>
+	      </section>
+				<section>
+					<h1>?</h1>
+				</section>
+				<section style="text-align: left;">
+					<h1>Obrigado!</h1>
+					<p>
+						<a href="http://bit.ly/1NUIbI5">brunolima.io/talk-nodebots-roll-out</a>
+						<a href="http://slides.com">bruno.lima@cesar.org.br</a> <br>
+						<a href="http://twitter.com/brunolimawd">@brunolimawd</a> <br>
+						<a href="http://facebook.com/brunolimawd">fb.com/brunolimawd</a> <br>
+						#jsdayrec
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+        	{ src: 'plugin/emojify/js/emojify.js', async: true, callback: function() { emojify.setConfig({ img_dir: 'plugin/emojify/images/basic' }); emojify.run(); } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
